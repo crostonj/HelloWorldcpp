@@ -21,7 +21,7 @@ void Receipt::setReceiptNumber(int _receiptNumber)
 
 int Receipt::getId()
 {
-	return 0;
+	return id;
 }
 
 void Receipt::setId(int _id)
@@ -31,7 +31,7 @@ void Receipt::setId(int _id)
 
 std::string Receipt::getDescription()
 {
-	return std::string();
+	return description;
 }
 
 void Receipt::setDescription(std::string _description)

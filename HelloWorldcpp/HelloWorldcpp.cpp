@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include "Receipts.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+    Receipts* receipts = new Receipts();
+    receipts->createReceipt("Test", 1.0);
+    receipts->readReceipt(1);
+    delete receipts;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

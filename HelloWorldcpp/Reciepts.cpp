@@ -9,6 +9,11 @@ Receipts::Receipts() {
 	nextId = 1;
 }
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="description"></param>
+/// <param name="amount"></param>
 void Receipts::createReceipt(const std::string description, double amount) {
 	Receipt receipt;
 	receipt.setId(nextId++);
@@ -18,6 +23,11 @@ void Receipts::createReceipt(const std::string description, double amount) {
 	receipts.push_back(receipt);
 }
 
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="id"></param>
 void Receipts::readReceipt(int id) {
 	for (Receipt& receipt : receipts) {
 		if (receipt.getId() == id) {
@@ -30,6 +40,13 @@ void Receipts::readReceipt(int id) {
 	std::cout << "Receipt not found." << std::endl;
 }
 
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="id"></param>
+/// <param name="newDescription"></param>
+/// <param name="newAmount"></param>
 void Receipts::updateReceipt(int id, const std::string newDescription, double newAmount) {
 	for (Receipt& receipt : receipts) {
 		if (receipt.getId() == id) {
@@ -42,6 +59,11 @@ void Receipts::updateReceipt(int id, const std::string newDescription, double ne
 	std::cout << "Receipt not found." << std::endl;
 }
 
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="id"></param>
 void Receipts::deleteReceipt(int id) {
 	for (auto it = receipts.begin(); it != receipts.end(); ++it) {
 		if (it->getId() == id) {
